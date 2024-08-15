@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "./App.css"; // Ensure to create and link this CSS file
+import "./App.css"; 
 
 function Chat({ socket, username, room }) {
     const [currentMessage, setCurrentMessage] = useState("");
@@ -16,7 +16,7 @@ function Chat({ socket, username, room }) {
             if (socket) {
                 await socket.emit("send_message", messageData);
                 setMessageList((list) => [...list, messageData]);
-                setCurrentMessage(""); // Clear the input field after sending the message
+                setCurrentMessage(""); 
             } else {
                 console.error("Socket is not defined");
             }
@@ -31,7 +31,6 @@ function Chat({ socket, username, room }) {
             });
         }
 
-        // Cleanup on unmount
         return () => {
             if (socket) {
                 socket.off("recieve_message");
