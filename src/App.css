@@ -82,7 +82,7 @@ body {
 
 #you {
   align-self: flex-start;
-  background-color: #e0f7fa; /* Light green for your messages */
+  background-color: #e0f7fa; 
 }
 
 #you .message-content {
@@ -96,7 +96,7 @@ body {
 
 #other {
   align-self: flex-end;
-  background-color: #bbdefb; /* Light blue for other messages */
+  background-color: #bbdefb; 
 }
 
 #other .message-content {
